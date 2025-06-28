@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPTs - Sistema de Processamento de Transações</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Introdução -->
+        <div class="slide active" id="slide1">
+            <div class="slide-content">
+                <div class="header">
+                    <h1 class="title">Sistemas de Processamento de Transações</h1>
+                    <h2 class="subtitle">Como funcionam os SPTs usando o Nubank como exemplo</h2>
+                </div>
+                
+                <div class="team-section">
+                    <h3>Equipe do Projeto</h3>
+                    <div class="team-members">
+                        <div class="member">
+                            <div class="member-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="member-name">Ridelvan</span>
+                        </div>
+                        <div class="member">
+                            <div class="member-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="member-name">Diogo</span>
+                        </div>
+                        <div class="member">
+                            <div class="member-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="member-name">Dinailson</span>
+                        </div>
+                        <div class="member">
+                            <div class="member-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span class="member-name">Pablo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro-content">
+                    <div class="intro-card">
+                        <h3>🎯 Introdução</h3>
+                        <p>O que é um Sistema de Processamento de Transações (SPT)?</p>
+                        <p>Um SPT é como o "coração" de uma empresa digital que lida com dinheiro.</p>
+                    </div>
+                </div>
+
+                <div class="navigation-hint">
+                    <p>Use as setas do teclado ou clique nos botões para navegar</p>
+                    <div class="nav-buttons">
+                        <button class="nav-btn" onclick="nextSlide()">
+                            <i class="fas fa-arrow-right"></i> Próximo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: O que é um SPT -->
+        <div class="slide" id="slide2">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>🎯 O que é um Sistema de Processamento de Transações?</h2>
+                    <p class="slide-subtitle">Apresentado por: Ridelvan</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Definição</h3>
+                        <p>Um SPT é como o "coração" de uma empresa digital que lida com dinheiro. Ele garante que todas as transações feitas por clientes funcionem corretamente.</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Exemplos de Transações</h3>
+                        <div class="transaction-examples">
+                            <div class="example-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Fazer um PIX</span>
+                            </div>
+                            <div class="example-item">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Passar o cartão de crédito</span>
+                            </div>
+                            <div class="example-item">
+                                <i class="fas fa-file-invoice"></i>
+                                <span>Pagar um boleto</span>
+                            </div>
+                            <div class="example-item">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span>Transferir dinheiro</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Exemplo Prático</h3>
+                        <div class="example-flow">
+                            <div class="flow-step">
+                                <div class="step-number">1</div>
+                                <p>Você insere o cartão Nubank</p>
+                            </div>
+                            <div class="flow-step">
+                                <div class="step-number">2</div>
+                                <p>O sistema verifica se tem saldo</p>
+                            </div>
+                            <div class="flow-step">
+                                <div class="step-number">3</div>
+                                <p>Debita o valor</p>
+                            </div>
+                            <div class="flow-step">
+                                <div class="step-number">4</div>
+                                <p>Confirma com a maquininha</p>
+                            </div>
+                            <div class="flow-step">
+                                <div class="step-number">5</div>
+                                <p>Registra tudo com segurança</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn" onclick="prevSlide()">
+                        <i class="fas fa-arrow-left"></i> Anterior
+                    </button>
+                    <button class="nav-btn" onclick="nextSlide()">
+                        <i class="fas fa-arrow-right"></i> Próximo
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Como funciona um SPT -->
+        <div class="slide" id="slide3">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>🧠 Como funciona um SPT?</h2>
+                    <p class="slide-subtitle">Apresentado por: Diogo</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>O que é uma "transação"?</h3>
+                        <p>É uma operação financeira que precisa acontecer 100% certa ou não acontecer. Ex: transferir R$50 da sua conta pra outra. Se der erro, o dinheiro não pode "sumir".</p>
+                    </div>
+
+                    <div class="content-card acid-rules">
+                        <h3>Regras ACID</h3>
+                        <div class="acid-container">
+                            <div class="acid-rule">
+                                <div class="acid-icon">⚛️</div>
+                                <h4>Atomicidade</h4>
+                                <p>Ou tudo acontece, ou nada acontece</p>
+                                <small>Ex: Se você faz um PIX e a internet cai, o sistema cancela tudo.</small>
+                            </div>
+                            <div class="acid-rule">
+                                <div class="acid-icon">🔗</div>
+                                <h4>Consistência</h4>
+                                <p>Os dados sempre fazem sentido</p>
+                                <small>Ex: Não pode uma conta ficar com saldo negativo sem limite.</small>
+                            </div>
+                            <div class="acid-rule">
+                                <div class="acid-icon">🔒</div>
+                                <h4>Isolamento</h4>
+                                <p>Cada transação é feita de forma separada</p>
+                                <small>Ex: se 100 pessoas pagam boletos ao mesmo tempo, nenhuma interfere na outra.</small>
+                            </div>
+                            <div class="acid-rule">
+                                <div class="acid-icon">💾</div>
+                                <h4>Durabilidade</h4>
+                                <p>Uma vez feita, a transação fica registrada</p>
+                                <small>Ex: Se você paga uma fatura do cartão, mesmo que o app feche, a operação foi salva.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn" onclick="prevSlide()">
+                        <i class="fas fa-arrow-left"></i> Anterior
+                    </button>
+                    <button class="nav-btn" onclick="nextSlide()">
+                        <i class="fas fa-arrow-right"></i> Próximo
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Como o sistema é construído -->
+        <div class="slide" id="slide4">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>🔧 Como o sistema é construído?</h2>
+                    <p class="slide-subtitle">Apresentado por: Dinailson</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Arquitetura em Microserviços</h3>
+                        <p>O Nubank usa a chamada arquitetura em microserviços:</p>
+                        <ul>
+                            <li>Cada função é um "bloco" separado</li>
+                            <li>Isso evita que um erro afete todo o sistema</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Componentes Principais</h3>
+                        <div class="components">
+                            <div class="component">
+                                <div class="component-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="component-info">
+                                    <h4>App (Cliente)</h4>
+                                    <p>Você acessa do celular</p>
+                                </div>
+                            </div>
+                            <div class="component">
+                                <div class="component-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div class="component-info">
+                                    <h4>Servidor (Backend)</h4>
+                                    <p>Onde tudo é processado</p>
+                                </div>
+                            </div>
+                            <div class="component">
+                                <div class="component-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="component-info">
+                                    <h4>Banco de Dados</h4>
+                                    <p>Onde tudo é guardado</p>
+                                </div>
+                            </div>
+                            <div class="component">
+                                <div class="component-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="component-info">
+                                    <h4>Mensageiros (Kafka)</h4>
+                                    <p>Garantem que as informações passem entre os serviços</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Exemplo de Fluxo PIX</h3>
+                        <div class="pix-flow">
+                            <div class="flow-item">
+                                <div class="flow-icon">📱</div>
+                                <p>Você clica em "fazer um PIX"</p>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-item">
+                                <div class="flow-icon">🔄</div>
+                                <p>O app envia a ordem ao servidor</p>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-item">
+                                <div class="flow-icon">✅</div>
+                                <p>O servidor verifica tudo</p>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-item">
+                                <div class="flow-icon">💾</div>
+                                <p>Registra no banco de dados</p>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-item">
+                                <div class="flow-icon">🎉</div>
+                                <p>Retorna "PIX realizado"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn" onclick="prevSlide()">
+                        <i class="fas fa-arrow-left"></i> Anterior
+                    </button>
+                    <button class="nav-btn" onclick="nextSlide()">
+                        <i class="fas fa-arrow-right"></i> Próximo
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Estudo de Caso Nubank -->
+        <div class="slide" id="slide5">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>🏦 Estudo de Caso: Nubank</h2>
+                    <p class="slide-subtitle">Apresentado por: Pablo</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>O que é o Nubank?</h3>
+                        <div class="nubank-info">
+                            <div class="info-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Criado em 2013</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Um dos maiores da América Latina</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Tudo pelo app — sem agências físicas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Como o Nubank usa SPTs</h3>
+                        <p>Todo pagamento com cartão, PIX, empréstimo, cobrança… passa por sistemas de transações.</p>
+                        
+                        <div class="pix-process">
+                            <h4>Exemplo: PIX pelo Nubank</h4>
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <div class="step-icon">💰</div>
+                                    <p>Verifica o saldo da conta</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-icon">🔍</div>
+                                    <p>Consulta a chave PIX do destino</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-icon">🏛️</div>
+                                    <p>Envia dados ao Banco Central</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-icon">📝</div>
+                                    <p>Registra o envio e mostra comprovante</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Tecnologias do Nubank</h3>
+                        <div class="tech-grid">
+                            <div class="tech-category">
+                                <h4>Linguagens</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Clojure</span>
+                                    <span class="tech-tag">Kotlin</span>
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">Go</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Banco de Dados</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">DynamoDB</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Plataforma</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Amazon AWS</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Mensageria</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Apache Kafka</span>
+                                </div>
+                            </div>
+                            <div class="tech-category">
+                                <h4>Segurança</h4>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Criptografia</span>
+                                    <span class="tech-tag">2FA</span>
+                                    <span class="tech-tag">IA Antifraude</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn" onclick="prevSlide()">
+                        <i class="fas fa-arrow-left"></i> Anterior
+                    </button>
+                    <button class="nav-btn" onclick="nextSlide()">
+                        <i class="fas fa-arrow-right"></i> Próximo
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Desafios e Futuro -->
+        <div class="slide" id="slide6">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>🔮 Desafios e Futuro dos SPTs</h2>
+                    <p class="slide-subtitle">Apresentado por: Todos</p>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Problemas que empresas enfrentam</h3>
+                        <div class="challenges">
+                            <div class="challenge">
+                                <div class="challenge-icon">👥</div>
+                                <div class="challenge-content">
+                                    <h4>Alta Concorrência</h4>
+                                    <p>Milhões de clientes acessam o sistema ao mesmo tempo</p>
+                                </div>
+                            </div>
+                            <div class="challenge">
+                                <div class="challenge-icon">🦹</div>
+                                <div class="challenge-content">
+                                    <h4>Fraudes</h4>
+                                    <p>Golpistas tentam enganar o sistema</p>
+                                </div>
+                            </div>
+                            <div class="challenge">
+                                <div class="challenge-icon">⏰</div>
+                                <div class="challenge-content">
+                                    <h4>Disponibilidade</h4>
+                                    <p>Precisa funcionar 24h por dia, sem cair</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Como resolvem?</h3>
+                        <div class="solutions">
+                            <div class="solution">
+                                <i class="fas fa-globe"></i>
+                                <span>Servidores espalhados pelo mundo</span>
+                            </div>
+                            <div class="solution">
+                                <i class="fas fa-robot"></i>
+                                <span>Inteligência artificial para detectar fraudes</span>
+                            </div>
+                            <div class="solution">
+                                <i class="fas fa-save"></i>
+                                <span>Backups automáticos dos dados</span>
+                            </div>
+                            <div class="solution">
+                                <i class="fas fa-puzzle-piece"></i>
+                                <span>Microserviços (sistema dividido em partes)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>Futuro dos SPTs</h3>
+                        <div class="future-tech">
+                            <div class="future-item">
+                                <div class="future-icon">🔗</div>
+                                <div class="future-content">
+                                    <h4>Blockchain</h4>
+                                    <p>Transações mais seguras e rastreáveis</p>
+                                </div>
+                            </div>
+                            <div class="future-item">
+                                <div class="future-icon">👁️</div>
+                                <div class="future-content">
+                                    <h4>Biometria</h4>
+                                    <p>Pagamentos com reconhecimento facial ou voz</p>
+                                </div>
+                            </div>
+                            <div class="future-item">
+                                <div class="future-icon">🌐</div>
+                                <div class="future-content">
+                                    <h4>Open Finance</h4>
+                                    <p>Vários bancos conectados entre si</p>
+                                </div>
+                            </div>
+                            <div class="future-item">
+                                <div class="future-icon">📡</div>
+                                <div class="future-content">
+                                    <h4>IoT</h4>
+                                    <p>Pagar só ao passar perto de sensores</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn" onclick="prevSlide()">
+                        <i class="fas fa-arrow-left"></i> Anterior
+                    </button>
+                    <button class="nav-btn" onclick="nextSlide()">
+                        <i class="fas fa-arrow-right"></i> Próximo
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Conclusão -->
+        <div class="slide" id="slide7">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <h2>🧠 Conclusão</h2>
+                    <p class="slide-subtitle">Apresentado por: Todos</p>
+                </div>
+
+                <div class="conclusion-content">
+                    <div class="conclusion-card">
+                        <div class="conclusion-icon">💡</div>
+                        <h3>Principais Pontos</h3>
+                        <ul>
+                            <li>Os SPTs estão por trás de tudo que fazemos com dinheiro hoje</li>
+                            <li>Empresas como o Nubank são exemplos de como usar tecnologia, programação e segurança</li>
+                            <li>Lidam com milhões de clientes ao mesmo tempo</li>
+                        </ul>
+                    </div>
+
+                    <div class="conclusion-card">
+                        <div class="conclusion-icon">🎓</div>
+                        <h3>Importância Acadêmica</h3>
+                        <p>Entender esses sistemas é essencial para quem estuda:</p>
+                        <div class="study-areas">
+                            <span class="study-area">Programação</span>
+                            <span class="study-area">Análise de Sistemas</span>
+                            <span class="study-area">Ciência da Computação</span>
+                            <span class="study-area">Sistemas de Informação</span>
+                        </div>
+                    </div>
+
+                    <div class="conclusion-card">
+                        <div class="conclusion-icon">🚀</div>
+                        <h3>Obrigado!</h3>
+                        <p>Esperamos que esta apresentação tenha sido útil para entender como funcionam os Sistemas de Processamento de Transações!</p>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="nav-btn" onclick="prevSlide()">
+                        <i class="fas fa-arrow-left"></i> Anterior
+                    </button>
+                    <button class="nav-btn" onclick="goToSlide(1)">
+                        <i class="fas fa-home"></i> Início
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicadores de slide -->
+        <div class="slide-indicators">
+            <div class="indicator active" onclick="goToSlide(1)"></div>
+            <div class="indicator" onclick="goToSlide(2)"></div>
+            <div class="indicator" onclick="goToSlide(3)"></div>
+            <div class="indicator" onclick="goToSlide(4)"></div>
+            <div class="indicator" onclick="goToSlide(5)"></div>
+            <div class="indicator" onclick="goToSlide(6)"></div>
+            <div class="indicator" onclick="goToSlide(7)"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
